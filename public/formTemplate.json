@@ -1,0 +1,63 @@
+{
+  "title": "My form",
+  "inputs": [
+    {
+      "title": "Lastname",
+      "name": "lastname",
+      "type": "text",
+      "placeholder": "Doe",
+      "required": true
+    },
+    {
+      "title": "Firstname",
+      "name": "firstname",
+      "type": "text",
+      "placeholder": "John.",
+      "required": true
+    },
+    {
+      "title": "Email",
+      "name": "email",
+      "type": "email",
+      "placeholder": "john.doe@mydomain.com",
+      "required": true
+    },
+    {
+      "title": "Description",
+      "name": "description",
+      "type": "textarea",
+      "placeholder":"Write your description...",
+      "required" : false
+    },
+    {
+      "title": "Phone number",
+      "name": "phone-number",
+      "type": "phone",
+      "placeholder": "213-509-6995",
+      "required": false
+    },
+    {
+      "title": "Favorite number",
+      "name": "favorite-number",
+      "type": "number",
+      "placeholder": "7",
+      "min": 0,
+      "max": 10,
+      "required": false
+    },
+    {
+      "title": "Image",
+      "name": "image-file",
+      "type": "file",
+      "accept": "image/png, image/jpeg",
+      "required": false
+    },
+    {
+      "title": "Password",
+      "name": "password",
+      "type": "password",
+      "placeholder": "Enter your password...",
+      "required": true
+    }
+  ]
+}

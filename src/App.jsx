@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import FormRenderer from "./Components/FormRenderer.jsx";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <h1 className="text-center my-5">React JSON form renderer</h1>
+      <main>
+          <h1 className="text-center my-5">React JSON form renderer</h1>
+        <div className="col-sm-12 col-lg-6 mx-auto p-3 border border-2 mb-5">
+            <form method="POST" className="xl">
+                <FormRenderer path="./formTemplate.json" />
+                <small className="d-block text-danger text-center mt-5"><sup>*</sup>Champs obligatoires</small>
+                <button className="btn btn-primary w-100 mt-4" type="submit">Valider le formulaire</button>
+            </form>
+        </div>
+      </main>
     </div>
   )
 }
