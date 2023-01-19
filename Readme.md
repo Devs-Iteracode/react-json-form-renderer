@@ -76,6 +76,12 @@ Le composant `<FormRenderer />` prends deux attributs :
 
 - `parameters` (optionnel) : corresponds aux paramètres que vous souhaitez passer au `fetch()` du `path` donné précédemment. Il prend un `object`. [voir la documentation `fetch()` Mozilla](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch).
 
+- `isRendered` (obligatoire) : execute la fonction callback avant et après le rendu du formulaire.
+
 ```jsx
-<FormRenderer path="./formTemplate.json" parameters={...} />
+const [isFormRendered, setIsFormRendered] = useState(false);
+
+return (
+	<FormRenderer path="./formTemplate.json" parameters={...} isRendered={setIsFormRendered} />
+)
 ```
