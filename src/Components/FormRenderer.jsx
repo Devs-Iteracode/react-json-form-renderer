@@ -12,6 +12,13 @@ export default function FormRenderer({path, parameters}){
 
 	return (
 		<>
+			{ !schema && (
+				<div className="d-flex justify-content-center my-5">
+					<div className="spinner-border text-primary" role="status">
+						<span className="visually-hidden">Loading...</span>
+					</div>
+				</div>
+			)}
 			{ schema && (
 				<>
 					<h2>{schema.title}</h2>
