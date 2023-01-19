@@ -1,12 +1,16 @@
 import {useEffect, useState} from "react";
 
-export default function FormRenderer({path, parameters}){
+export default function FormRenderer({path, parameters, isRendered}){
 	const [schema, setSchema] = useState(null);
 
 	useEffect(() => {
+		isRendered(false);
 		fetch(path, parameters)
 			.then(res => res.json())
-			.then(schema => setSchema(schema));
+			.then(schema => {
+				isRendered(true);
+				setSchema(schema);
+			});
 	}, []);
 
 
